@@ -1,0 +1,329 @@
+/*-------------------- CSS RESET ---------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ROOT VARIABLES */
+:root {
+    --teal-color: #007d7b;
+    --black-color: #000000;
+    --white-color: #ffffff;  
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* GLOBAL STYLES (mobile first)*/ 
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--black-color);
+    color: var(--black-color);
+    padding: 20px;
+}
+
+header {
+    background-color: var(--white-color);
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 10px;
+}
+
+header h1 {
+    color: var(--teal-color);
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav {
+    background-color: var(--black-color);
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: var(--white-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+nav a[href="#top"] {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px;
+    background-color: var(--black-color);
+	border: 2px solid var(--white-color); 
+	color: var(--white-color);
+    z-index: 1;
+}
+
+section {
+    margin: 0 10px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.5;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+figure {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto; 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.gallery figcaption {
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* FIGCAPTION STYLES */
+
+/* Chile */
+.gallery figure:first-of-type figcaption {
+    bottom: 5%;
+    color: var(--white-color);
+}
+
+/* Guatemala */
+.gallery figure:nth-child(2) figcaption {
+    top: 10%;
+    color: var(--white-color);
+}
+
+/* Hawaii */
+.gallery figure:nth-child(3) figcaption {
+    bottom: 5%;
+    color: var(--white-color);
+}
+
+/* Iran */
+.gallery figure:nth-child(4) figcaption {
+    top: 5%;
+    color: var(--black-color);
+}
+
+/* Ireland */
+.gallery figure:nth-child(5) figcaption {
+    top: 5%;
+    color: var(--black-color);
+}
+
+/* Italy */
+.gallery figure:nth-child(6) figcaption {
+    bottom: 3%;
+    color: var(--black-color);
+}
+
+/* Moab Desert */
+.gallery figure:nth-child(7) figcaption {
+    bottom: 5%;
+    color: var(--white-color);
+}
+
+/* Rocky Mountains */
+.gallery figure:nth-child(8) figcaption {
+    top: 10%;
+    color: var(--black-color);
+}
+
+/* Switzerland */
+.gallery figure:nth-child(9) figcaption {
+    top: 10%;
+    color: var(--black-color);
+}
+
+/* UK */
+.gallery figure:nth-child(10) figcaption {
+    top: 10%;
+    color: var(--black-color);
+}
+
+/* USA */
+.gallery figure:nth-child(11) figcaption {
+    top: 10%;
+    color: var(--black-color);
+}
+
+/* Wyoming */
+.gallery figure:last-of-type figcaption {
+    top: 10%;
+    color: var(--white-color);
+}
+
+/* CONTACT SECTION */
+#contact {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1.25em;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+form label {
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 10px;
+    border: 1px solid var(--white-color);
+    border-radius: 5px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-family: var(--body-font);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--teal-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form input[type="submit"] {
+    background-color: var(--teal-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 880px) {
+    header {
+        display: flex;
+        padding-left: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, auto); 
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+
+    /* Hawaii */
+    .gallery figure:nth-child(3) figcaption {
+        top: 42%;
+    }
+}
+
+@media (min-width: 1300px) {
+    nav {
+        display: flex;
+        justify-content: right;
+        padding-right: 10px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, auto); 
+    }
+
+    /* Hawaii */
+    .gallery figure:nth-child(3) figcaption {
+        top: 90%;
+    }
+}
